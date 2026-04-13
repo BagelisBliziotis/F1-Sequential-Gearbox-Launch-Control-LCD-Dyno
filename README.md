@@ -39,4 +39,6 @@ and a multi-stage launch control sequence.
 *What I'm learning:
 This is my first project that combines mechanical simulation with real-time embedded
 logic. Getting the launch control sequence right — non-blocking, with proper interlocks 
-has been the hardest part. More in the final README once it's done.
+has been the hardest part.I have also realned a lot about trobleshooting and debugging as
+it was the first time that so many problems have occured.Trying to handly and organize so many components was 
+difficult in such a small breadboard .More in the final README once it's done.
