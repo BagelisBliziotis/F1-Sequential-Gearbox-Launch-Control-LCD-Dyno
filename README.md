@@ -1,44 +1,35 @@
-# F1 Sequential Gearbox + Launch Control + LCD Dyno
+# F1 Sequential Gearbox + Launch Control + Physical Dyno Simulator
 
- Work in progress  hardware is wired, core logic is being finalized.
+Desktop Formula 1 cockpit simulato built on Arduino Uno. Features a realistic sequential gearbox with paddle shifters, clutch interlock, launch control sequence, physical DC motor
+16×2 LCD dashboard, RGB status LED, gear-indicator Leds (74HC595 register), and buzzer feedback.
 
-A desktop Formula 1 cockpit simulator built on Arduino. Inspired by real F1 start
-procedures and gearbox behavior. This is one of the most complex projects I've built
-so far  combining physical input hardware, a DC motor dyno, real-time LCD feedback,
-and a multi-stage launch control sequence.
+#Features:
+- *Sequential 8-speed gearbox(N-1-2-3-4-5-6-7) with servo gear indicator
+- *Clutch-paddle interlock – must hold clutch to shift 
+- *Rev-match protection – downshift denied above 8500 RPM
+- *Missed-shift detection with buzzer and warning
+- *Launch Control – hold both paddles + clutch → arm → release clutch → automatic RPM ramp + dyno spin-up
+- *Physical DC motor d – speed-controlled "engine" that reacts to throttle + gear + launch
+- *Real-time 16×2 LCD dashboard – Gear , RPM , Throttle % , Speed
+- *RGB + 8-LED gear strip via shift register
+- *Serial telemetry (9600 baud) for monitoring
 
-*What it does:
-- Sequential gearbox — gear up/down via paddle shifters, with a clutch interlock
-- Launch Control — mimics the real F1 start procedure: clutch in → hold RPM →
-  clutch release → non-blocking RPM ramp up
-- DC motor dyno — motor speed controlled via PWM, physically represents engine load
-- 16×2 LCD dashboard — live display of gear, RPM, launch state, and system status
-- RGB LED + gear LEDs — visual feedback via 74HC595 shift register
-- Buzzer — audio cues for gear shifts and launch events
-- Serial telemetry — real-time data stream to Serial Monitor
-*Hardware:
-| Component | Purpose |
- Arduino Uno / Main controller 
- 16×2 LCD  / Live dashboard 
- DC motor + driver / Dyno simulation 
- 74HC595 shift register / Gear indicator LEDs 
- RGB LED / System status 
- Passive buzzer / Audio feedback 
- Push buttons / Gear up, gear down, clutch 
- Potentiometer / Throttle input 
+#Components:
+- Arduino Uno
+- 16×2 LCD (4-bit mode)
+- Servo (gear indicator)
+- 74HC595 + 7 LEDs (gear strip)
+- RGB LED (status)
+- Passive buzzer
+- 10kΩ Potentiometer (throttle)
+- 3x push buttons (clutch + up + down paddles) with internal pull-ups
+- DC motor + driver (dyno)
+- Breadboard + jumper wires
+- 
+#What i learned:
+- Non-blocking state machines (`enum LaunchState`)
+- Multi-component timing with `millis()`
+- Shift register control (`shiftOut`)
+- LCD + Servo + PWM integration
+- Real-world F1 logic (clutch interlock, rev-matching, launch control)
 
-*Status:
-
-- [x] Hardware wired
-- [x] Initial code structure written
-- [ ] Launch control ramp — finalizing
-- [ ] LCD state logic — debugging
-- [ ] Serial telemetry — testing
-- [ ] Demo GIF — coming once stable
-
-*What I'm learning:
-This is my first project that combines mechanical simulation with real-time embedded
-logic. Getting the launch control sequence right — non-blocking, with proper interlocks 
-has been the hardest part.I have also realned a lot about trobleshooting and debugging as
-it was the first time that so many problems have occured.Trying to handly and organize so many components was 
-difficult in such a small breadboard .More in the final README once it's done.
