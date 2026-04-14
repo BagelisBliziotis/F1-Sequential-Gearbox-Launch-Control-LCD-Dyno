@@ -27,9 +27,10 @@ Desktop Formula 1 cockpit simulato built on Arduino Uno. Features a realistic se
 - Breadboard + jumper wires
 - 
 #What i learned:
-- Non-blocking state machines (`enum LaunchState`)
-- Multi-component timing with `millis()`
-- Shift register control (`shiftOut`)
-- LCD + Servo + PWM integration
-- Real-world F1 logic (clutch interlock, rev-matching, launch control)
+This project taught me that millis() is essential for managing multiple systems at once. Running the sequential gearbox logic, launch control ramp, RPM simulation
+and DC motor speed simultaneously. The state machine (clutch interlock, rev-match protection, launch sequence) depends on tracking elapsed time and making decisions
+in the main loop every cycle. Cramming 14+ components on a single breadboard was the bigger challenge though  servo, LCD data lines, shift register pins
+RGB LED, buttons, potentiometer, motor driver, and buzzer all competing for space. I had to wire methodically and test each subsystem before integration.
+The DC motor control brought it all together speed ramping based on throttle, gear, and launch state made the dyno feel like a real engine responding to input.
+By far the most satisfying and fullfilling project yet
 
