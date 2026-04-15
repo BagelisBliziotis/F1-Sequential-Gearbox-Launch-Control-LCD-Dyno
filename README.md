@@ -32,10 +32,16 @@ and DC motor speed simultaneously. The state machine (clutch interlock, rev-matc
 in the main loop every cycle. Cramming 14+ components on a single breadboard was the bigger challenge though  servo, LCD data lines, shift register pins
 RGB LED, buttons, potentiometer, motor driver, and buzzer all competing for space. I had to wire methodically and test each subsystem before integration.
 The DC motor control brought it all together speed ramping based on throttle, gear, and launch state made the dyno feel like a real engine responding to input.
-By far the most satisfying and fullfilling project yet
-DEMOS:
-*Launch mode:
+By far the most satisfying and fullfilling project yet.
 
+DEMOS:
+*Overview:
+
+
+https://github.com/user-attachments/assets/da056762-0906-47d6-95ec-db6a9f572ec4
+
+
+*Launch mode:
 
 https://github.com/user-attachments/assets/d58ea1f0-23e6-4124-b152-e5edc2067c2a
 
