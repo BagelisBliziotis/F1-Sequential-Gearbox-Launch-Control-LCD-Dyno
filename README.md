@@ -40,6 +40,13 @@ DEMOS:
 
 https://github.com/user-attachments/assets/da056762-0906-47d6-95ec-db6a9f572ec4
 
+*Full mechanism:
+
+
+https://github.com/user-attachments/assets/3471690c-4a32-4993-af74-a86455d93189
+
+
+
 
 *Launch mode:
 
