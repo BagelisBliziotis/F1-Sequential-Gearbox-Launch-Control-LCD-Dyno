@@ -33,4 +33,11 @@ in the main loop every cycle. Cramming 14+ components on a single breadboard was
 RGB LED, buttons, potentiometer, motor driver, and buzzer all competing for space. I had to wire methodically and test each subsystem before integration.
 The DC motor control brought it all together speed ramping based on throttle, gear, and launch state made the dyno feel like a real engine responding to input.
 By far the most satisfying and fullfilling project yet
+DEMOS:
+*Launch mode:
+
+
+https://github.com/user-attachments/assets/d58ea1f0-23e6-4124-b152-e5edc2067c2a
+
+
 
