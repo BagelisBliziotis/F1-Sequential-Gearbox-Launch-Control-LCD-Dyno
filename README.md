@@ -48,7 +48,7 @@ https://github.com/user-attachments/assets/3471690c-4a32-4993-af74-a86455d93189
 
 
 
-*Launch mode:
+*Launch mode/miss shift:
 
 https://github.com/user-attachments/assets/d58ea1f0-23e6-4124-b152-e5edc2067c2a
 
